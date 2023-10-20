@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="assets/css/usuarios.css" rel="stylesheet">
+
+    <link href="assets/img/logo.png" rel="icon" sizes="64x46">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="96x96">
+
+    <title>SalaTech</title>
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/fontawesome-free/css/all.min.css">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.11.18/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="https://cdn.datatables.net/1.11.18/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/usuarios.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/swal.js"></script>
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+        <h1 class="logo me-auto me-lg-0"><a href="index.html">SALATECH<span>.</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link scrollto active" href="index.html#hero">Inicio</a></li>
+                <li><a class="nav-link scrollto" href="index.html#about">¿Qué es salatech?</a></li>
+                <li><a class="nav-link scrollto" href="index.html#services">¿Qué ofrecemos?</a></li>
+                <li><a class="nav-link scrollto" href="index.html#team">Equipo</a></li>
+                <li><a class="nav-link scrollto" href="index.html#contact">Contáctanos</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        <a href="login.html" class="get-started-btn scrollto">Iniciar</a>
+        <a href="register.html" class="get-started-btn scrollto">Registrate</a>
+
+    </div>
+</header><!-- End Header -->
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="usuarios" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Nombres</th>
+                            <th>Email</th>
+                            <th>Identificación</th>
+                            <th>Grupo</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="float-right">
+                        <span style="color: #D3D3D3">Página actual: <span id="currentPage">1</span></span>
+                        <button style="color: #0e1d34" type="button" class="btn btn-primary" id="btn-prev" onclick="paginaAnterior()" disabled>Anterior</button>
+                        <button style="color: #0e1d34" type="button" class="btn btn-primary" id="btn-next" onclick="paginaSiguiente()">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->
+<!-- Footer -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-info">
+                        <h3>SALATECH<span>.</span></h3>
+
+                        <div class="social-links mt-3">
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#hero">Inicio</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#about">¿Qué es SalaTech?</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#services">¿Qué ofrecemos?</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#team">Equipo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>SalaTech</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+            <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
