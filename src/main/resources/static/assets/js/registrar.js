@@ -9,34 +9,45 @@ async function registrarUsuario() {
     datos.grupo = document.getElementById("txtGrupo").value;
     datos.contrasena = document.getElementById("txtPassword").value;
 
-    const response = await fetch('/createEstudiante', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(datos)
-    });
-
-    console.log(response);
-
-    if (!(response.ok)) {
+    if (datos.identificacion == "" || datos.nombres == "" || datos.email == "" || datos.grupo == "" || datos.contrasena == "") {
         swal.fire({
-            title: "Error al crear el usuario",
+            title: "Todos los campos son obligatorios",
             text: "Intente de nuevo",
             icon: "question",
             showConfirmButton: false,
             timer: 1500
         })
-        console.log("Error al crear el usuario");
-    } else {
-        swal.fire({
-            title: "Usuario creado exitosamente",
-            icon: "success",
-            showConfirmButton: false,
-            timer: 1500
-        }).then(function () {
-            location.href = "index.html";
+        return;
+    }else{
+        const response = await fetch('/createEstudiante', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(datos)
         });
+
+        console.log(response);
+
+        if (!(response.ok)) {
+            swal.fire({
+                title: "Error al crear el usuario",
+                text: "Intente de nuevo",
+                icon: "question",
+                showConfirmButton: false,
+                timer: 1500
+            })
+            console.log("Error al crear el usuario");
+        } else {
+            swal.fire({
+                title: "Usuario creado exitosamente",
+                icon: "success",
+                showConfirmButton: false,
+                timer: 1500
+            }).then(function () {
+                location.href = "index.html";
+            });
+        }
     }
 }
